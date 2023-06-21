@@ -21,7 +21,7 @@ async function getData(coinName) {
     const coin = data.data.coins[0];
     for (let i = 0; i < coins.length; i++) {
       if (coins[i].symbol === coin.symbol) {
-        msgSpan.textContent = `Already added to the List${input.value}`;
+        msgSpan.textContent = `You already know the data for ${name}, Please search for another coin 😉`;
         return;
       }
     }
@@ -56,7 +56,6 @@ function writeDisplay(currentCoin) {
         <div>
             <p>$${Number(currentCoin.price).toFixed(2)}</p>
         </div>
-        
     `;
   coinList.appendChild(coinElement);
 }
